@@ -69,3 +69,36 @@ textarea {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
+
+.container-fluid{
+  width: 115%;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.col-1, .col-8{
+  border: 2px rgb(0, 0, 0) solid;
+  border-radius: 1rem;
+}
+
+.col-1{
+  background-color: #77dd77;
+  font-size: 1.5rem;
+}
+
+.row{
+  height: max-content;
+}
+
+#currentday{
+  font-size: 2.5rem;
+}
+
+#taskblock1, #taskblock2, #taskblock3, #taskblock4, #taskblock5, #taskblock6, #taskblock7, #taskblock8, #taskblock9, #taskblock10{
+  background-color: #77dd77;
+}
+
+textarea{
+  font-size: 2rem;
+  font-weight: bold;
+}
