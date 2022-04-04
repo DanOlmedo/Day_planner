@@ -80,13 +80,19 @@ This homework is graded based on the following criteria:
 
 * Repository contains quality README file with description, screenshot, and link to deployed application
 
+* Repository URL: https://github.com/DanOlmedo/day_planner_homework
+
+* Deployed URL: https://danolmedo.github.io/day_planner_homework/
+
+* Screenshot of deployed app: ![Day planer homework screenshot](./Assets/day_planner_homework.PNG)
+
 ## Review
 
 You are required to submit the following for review:
 
 * The URL of the deployed application
 
-* The URL of the GitHub repository, with a unique name and a README describing the project
+* The URL of the GitHub repository, with a unique name and a README describing the project> 
 
 - - -
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
