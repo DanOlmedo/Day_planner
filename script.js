@@ -85,82 +85,27 @@ function blockColor(){
         $("#taskblock10").css("background-color","rgb(197, 195, 195)");};    
 };
 
-
 //Section for getting items from local storage to show upon refresh
-document.getElementById("taskText1").innerHTML = localStorage.getItem("task1");
-document.getElementById("taskText2").innerHTML = localStorage.getItem("task2");
-document.getElementById("taskText3").innerHTML = localStorage.getItem("task3");
-document.getElementById("taskText4").innerHTML = localStorage.getItem("task4");
-document.getElementById("taskText5").innerHTML = localStorage.getItem("task5");
-document.getElementById("taskText6").innerHTML = localStorage.getItem("task6");
-document.getElementById("taskText7").innerHTML = localStorage.getItem("task7");
-document.getElementById("taskText8").innerHTML = localStorage.getItem("task8");
-document.getElementById("taskText9").innerHTML = localStorage.getItem("task9");
-document.getElementById("taskText10").innerHTML = localStorage.getItem("task10");
+document.getElementById("taskText1").innerHTML = localStorage.getItem("save1");
+document.getElementById("taskText2").innerHTML = localStorage.getItem("save2");
+document.getElementById("taskText3").innerHTML = localStorage.getItem("save3");
+document.getElementById("taskText4").innerHTML = localStorage.getItem("save4");
+document.getElementById("taskText5").innerHTML = localStorage.getItem("save5");
+document.getElementById("taskText6").innerHTML = localStorage.getItem("save6");
+document.getElementById("taskText7").innerHTML = localStorage.getItem("save7");
+document.getElementById("taskText8").innerHTML = localStorage.getItem("save8");
+document.getElementById("taskText9").innerHTML = localStorage.getItem("save9");
+document.getElementById("taskText10").innerHTML = localStorage.getItem("save10");
 
-//Variables for "save" buttons and event listeners for "saving" functionality
-var saveItem1 = document.getElementById("save1")
-var saveItem2 = document.getElementById("save2")
-var saveItem3 = document.getElementById("save3")
-var saveItem4 = document.getElementById("save4")
-var saveItem5 = document.getElementById("save5")
-var saveItem6 = document.getElementById("save6")
-var saveItem7 = document.getElementById("save7")
-var saveItem8 = document.getElementById("save8")
-var saveItem9 = document.getElementById("save9")
-var saveItem10 = document.getElementById("save10")
+var saveAll = document.getElementsByTagName("button")
+console.log(saveAll)
 
-
-saveItem1.addEventListener("click",function(){
-    localStorage.setItem("task1",$("#taskText1").val())
-    document.getElementById("taskText1").innerHTML = localStorage.getItem("task1")
-
-});
-
-saveItem2.addEventListener("click",function(){
-    localStorage.setItem("task2",$("#taskText2").val())
-    document.getElementById("taskText2").innerHTML = localStorage.getItem("task2")
-});
-
-saveItem3.addEventListener("click",function(){
-    localStorage.setItem("task3",$("#taskText3").val())
-    document.getElementById("taskText3").innerHTML = localStorage.getItem("task3")
-});
-
-saveItem4.addEventListener("click",function(){
-    localStorage.setItem("task4",$("#taskText4").val())
-    document.getElementById("taskText4").innerHTML = localStorage.getItem("task4")
-});
-
-saveItem5.addEventListener("click",function(){
-    localStorage.setItem("task5",$("#taskText5").val())
-    document.getElementById("taskText5").innerHTML = localStorage.getItem("task5")
-});
-
-saveItem6.addEventListener("click",function(){
-    localStorage.setItem("task6",$("#taskText6").val())
-    document.getElementById("taskText6").innerHTML = localStorage.getItem("task6")
-});
-
-saveItem7.addEventListener("click",function(){
-    localStorage.setItem("task7",$("#taskText7").val())
-    document.getElementById("taskText7").innerHTML = localStorage.getItem("task7")
-});
-
-saveItem8.addEventListener("click",function(){
-    localStorage.setItem("task8",$("#taskText8").val())
-    document.getElementById("taskText8").innerHTML = localStorage.getItem("task8")
-});
-
-saveItem9.addEventListener("click",function(){
-    localStorage.setItem("task9",$("#taskText9").val())
-    document.getElementById("taskText9").innerHTML = localStorage.getItem("task9")
-});
-
-saveItem10.addEventListener("click",function(){
-    localStorage.setItem("task10",$("#taskText10").val())
-    document.getElementById("taskText10").innerHTML = localStorage.getItem("task10")
-});
+for (let i = 0; i < saveAll.length; i++) {
+    saveAll[i].addEventListener("click",function(){
+        var blockValue = this.parentElement.previousElementSibling.children[0].value
+        localStorage.setItem(this.id,blockValue)
+    })
+}
 
 //Run necessary functions
 setInterval(showCurrent, 100);
